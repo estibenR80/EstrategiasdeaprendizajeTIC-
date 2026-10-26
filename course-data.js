@@ -40,6 +40,15 @@ const COURSE = [
           </div>
         </div>
 
+        <div class="teacher-card">
+          <div class="teacher-card__avatar">👩‍🏫</div>
+          <div>
+            <span class="teacher-card__role">Docente facilitadora</span>
+            <strong class="teacher-card__name">Melba Camacho</strong>
+            <span class="teacher-card__desc">Te acompañará durante todo el recorrido de aprendizaje.</span>
+          </div>
+        </div>
+
         <div class="callout callout--info">
           <strong>¿Cómo recorrer el curso?</strong>
           Usa el menú lateral <em>Ruta de aprendizaje</em> o los botones <em>Anterior / Siguiente</em>. Cada estación que visitas se marca con ✓ y suma a tu barra de progreso.
@@ -60,6 +69,7 @@ const COURSE = [
 
         <table class="data">
           <tr><th>Denominación del programa</th><td>Competencias Digitales y Seguridad en Internet</td></tr>
+          <tr><th>Docente facilitadora</th><td>Melba Camacho</td></tr>
           <tr><th>Tipo de formación</th><td>Complementaria virtual</td></tr>
           <tr><th>Duración</th><td>40 horas</td></tr>
           <tr><th>Competencia</th><td>Aplicar herramientas digitales y prácticas de seguridad de la información de acuerdo con buenas prácticas y normativa vigente.</td></tr>
@@ -426,7 +436,7 @@ const COURSE = [
           La seguridad digital evoluciona constantemente. Mantente curioso, actualiza tus dispositivos y comparte estas buenas prácticas con tu familia y tu equipo de trabajo.
         </div>
 
-        <p style="margin-top:20px; color:var(--texto-suave);">Gracias por recorrer este ambiente de aprendizaje. 🛡️</p>
+        <p style="margin-top:20px; color:var(--texto-suave);">Gracias por recorrer este ambiente de aprendizaje. 🛡️<br/><strong>Docente facilitadora:</strong> Melba Camacho</p>
       </section>`
   }
 ];

@@ -246,6 +246,27 @@ table.data tbody tr:nth-child(even) { background: #fafcf8; }
 .mail__body { padding:18px; font-size:.95rem; }
 .clue { background: var(--amarillo); color:#000; padding:0 3px; border-radius:3px; cursor:help; font-weight:600; }
 
+/* ============ TARJETA DE DOCENTE ============ */
+.teacher-card {
+  display: flex; align-items: center; gap: 18px;
+  background: linear-gradient(120deg, #fff, var(--verde-claro));
+  border: 1.5px solid var(--verde); border-radius: var(--radio);
+  padding: 18px 22px; margin: 18px 0; box-shadow: var(--sombra);
+}
+.teacher-card__avatar {
+  flex-shrink: 0; width: 64px; height: 64px; border-radius: 50%;
+  background: #fff; display: grid; place-items: center; font-size: 2rem;
+  box-shadow: 0 4px 12px rgba(57,169,0,.2);
+}
+.teacher-card__role {
+  display: block; text-transform: uppercase; letter-spacing: .5px;
+  font-size: .72rem; font-weight: 700; color: var(--verde-osc);
+}
+.teacher-card__name {
+  display: block; font-family: 'Poppins'; font-size: 1.3rem; color: var(--texto); line-height: 1.2;
+}
+.teacher-card__desc { display: block; font-size: .85rem; color: var(--texto-suave); margin-top: 2px; }
+
 /* ============ TARJETAS INTERACTIVAS DIGCOMP ============ */
 .flip-card {
   display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
