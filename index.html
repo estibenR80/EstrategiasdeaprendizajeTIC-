@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Competencias Digitales y Seguridad en Internet | Curso de Formación</title>
+  <meta name="description" content="Curso interactivo de formación complementaria sobre competencias digitales y seguridad en Internet, estilo SENA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ BARRA SUPERIOR ============ -->
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="topbar__logo" aria-hidden="true">🛡️</span>
+      <div class="topbar__titles">
+        <strong>Formación Complementaria Virtual</strong>
+        <span>Competencias Digitales y Seguridad en Internet</span>
+      </div>
+    </div>
+    <div class="topbar__progress">
+      <span id="progressLabel" class="topbar__progress-label">Progreso: 0%</span>
+      <div class="progress">
+        <div id="progressBar" class="progress__bar" style="width:0%"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- ============ MENÚ LATERAL (RUTA DE APRENDIZAJE) ============ -->
+    <aside class="sidebar" id="sidebar">
+      <p class="sidebar__heading">Ruta de aprendizaje</p>
+      <nav id="nav" class="nav"></nav>
+      <div class="sidebar__footer">
+        <p>Duración estimada</p>
+        <strong>40 horas</strong>
+      </div>
+    </aside>
+
+    <!-- ============ CONTENIDO ============ -->
+    <main class="content" id="content" tabindex="-1"></main>
+  </div>
+
+  <!-- ============ NAVEGACIÓN INFERIOR ============ -->
+  <footer class="footerbar">
+    <button class="btn btn--ghost" id="prevBtn">◀ Anterior</button>
+    <button class="btn btn--menu" id="menuToggle">☰ Estaciones</button>
+    <button class="btn btn--primary" id="nextBtn">Siguiente ▶</button>
+  </footer>
+
+  <script src="course-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
