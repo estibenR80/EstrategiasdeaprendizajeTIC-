@@ -77,9 +77,46 @@
 
   /* ---------- Inicializar interacciones por sección ---------- */
   function initInteractions(item) {
+    if (item.id === "mod1") initDigComp();
     if (item.id === "act-pw") initPasswordTool();
     if (item.id === "act-phish") initPhish();
     if (item.id === "quiz") initQuiz();
+  }
+
+  /* ---------- Áreas interactivas DigComp (Módulo 1) ---------- */
+  function initDigComp() {
+    const cards = document.querySelectorAll(".flip-card");
+    const detail = document.getElementById("areaDetail");
+    const adIcon = document.getElementById("adIcon");
+    const adTitle = document.getElementById("adTitle");
+    const adText = document.getElementById("adText");
+    const adExtra = document.getElementById("adExtra");
+    if (!cards.length || !detail) return;
+
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        const i = parseInt(card.dataset.area, 10);
+        const area = DIGCOMP_AREAS[i];
+        if (!area) return;
+
+        cards.forEach((c) => c.classList.remove("is-selected"));
+        card.classList.add("is-selected");
+
+        // Relanzar animación del panel de detalle
+        detail.classList.remove("show", "pop");
+        void detail.offsetWidth; // fuerza reflow
+        detail.classList.add("show", "pop");
+
+        adIcon.textContent = area.icon;
+        adTitle.textContent = area.title;
+        adText.textContent = area.text;
+        adExtra.innerHTML = area.extra
+          ? `<div class="area-detail__extra">${area.extra}</div>`
+          : "";
+
+        detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    });
   }
 
   /* ---------- Verificador de contraseñas ---------- */

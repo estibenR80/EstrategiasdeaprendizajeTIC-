@@ -91,19 +91,72 @@ const COURSE = [
         <p class="lead">Las competencias digitales son el conjunto de conocimientos y habilidades para usar la tecnología de forma segura, crítica y creativa en el trabajo, el estudio y la vida diaria.</p>
 
         <h2>Las 5 áreas de la competencia digital</h2>
-        <p>El marco europeo <strong>DigComp</strong> organiza las competencias digitales en cinco áreas que te servirán como mapa:</p>
-        <div class="grid grid--2">
-          <div class="feature"><div class="feature__icon">🔎</div><h3>1. Información y datos</h3><p>Buscar, evaluar y organizar información digital distinguiendo fuentes fiables de desinformación.</p></div>
-          <div class="feature"><div class="feature__icon">💬</div><h3>2. Comunicación</h3><p>Interactuar y colaborar con otros mediante herramientas digitales con etiqueta y respeto (netiqueta).</p></div>
-          <div class="feature"><div class="feature__icon">🎨</div><h3>3. Creación de contenido</h3><p>Producir y editar documentos, imágenes o videos y respetar derechos de autor.</p></div>
-          <div class="feature"><div class="feature__icon">🛡️</div><h3>4. Seguridad</h3><p>Proteger dispositivos, datos personales, privacidad y salud digital. <em>(Foco de este curso.)</em></p></div>
-          <div class="feature"><div class="feature__icon">🧩</div><h3>5. Resolución de problemas</h3><p>Usar la tecnología para resolver necesidades y seguir aprendiendo de forma autónoma.</p></div>
+        <p>El marco europeo <strong>DigComp</strong> organiza las competencias digitales en cinco áreas que te servirán como mapa. 👉 <strong>Haz clic en cada tarjeta</strong> para descubrir más:</p>
+        <div class="grid grid--3" id="digcompGrid">
+          <button class="flip-card" data-area="0">
+            <span class="flip-card__icon">🔎</span>
+            <span class="flip-card__title">1. Información y datos</span>
+            <span class="flip-card__hint">Clic para saber más</span>
+          </button>
+          <button class="flip-card" data-area="1">
+            <span class="flip-card__icon">💬</span>
+            <span class="flip-card__title">2. Comunicación</span>
+            <span class="flip-card__hint">Clic para saber más</span>
+          </button>
+          <button class="flip-card" data-area="2">
+            <span class="flip-card__icon">🎨</span>
+            <span class="flip-card__title">3. Creación de contenido</span>
+            <span class="flip-card__hint">Clic para saber más</span>
+          </button>
+          <button class="flip-card" data-area="3">
+            <span class="flip-card__icon">🛡️</span>
+            <span class="flip-card__title">4. Seguridad</span>
+            <span class="flip-card__hint">Clic para saber más</span>
+          </button>
+          <button class="flip-card" data-area="4">
+            <span class="flip-card__icon">🧩</span>
+            <span class="flip-card__title">5. Resolución de problemas</span>
+            <span class="flip-card__hint">Clic para saber más</span>
+          </button>
+        </div>
+
+        <div class="area-detail" id="areaDetail">
+          <div class="area-detail__inner">
+            <span class="area-detail__icon" id="adIcon">👆</span>
+            <div>
+              <h3 id="adTitle">Selecciona un área arriba</h3>
+              <p id="adText">Al hacer clic en cualquiera de las 5 tarjetas verás aquí una explicación ampliada, un ejemplo real y un consejo práctico.</p>
+              <div id="adExtra"></div>
+            </div>
+          </div>
         </div>
 
         <h2>Material de formación</h2>
-        <p>Observa el siguiente video introductorio sobre qué son las competencias digitales y por qué son clave hoy:</p>
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/LHrzw7habLQ" title="Competencias digitales" allowfullscreen loading="lazy"></iframe>
+        <p>Refuerza lo aprendido con estos recursos audiovisuales. Haz clic para abrirlos:</p>
+        <div class="grid grid--2">
+          <a class="res-card" href="https://www.youtube.com/results?search_query=qu%C3%A9+son+las+competencias+digitales+explicaci%C3%B3n" target="_blank" rel="noopener">
+            <span class="res-card__play">▶</span>
+            <div>
+              <strong>Video: ¿Qué son las competencias digitales?</strong>
+              <span>Introducción en video (YouTube)</span>
+            </div>
+          </a>
+          <a class="res-card" href="https://www.youtube.com/results?search_query=marco+digcomp+competencias+digitales" target="_blank" rel="noopener">
+            <span class="res-card__play">▶</span>
+            <div>
+              <strong>Video: El marco europeo DigComp</strong>
+              <span>Las 5 áreas explicadas (YouTube)</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>📖 Lectura complementaria</h3>
+        <div class="card">
+          <ul style="margin-bottom:0;">
+            <li><strong>¿Qué es DigComp?</strong> Es el Marco Europeo de Competencias Digitales para la Ciudadanía, una referencia para saber qué habilidades digitales necesita una persona hoy.</li>
+            <li><strong>¿Por qué importa en el trabajo?</strong> Cada vez más empleos exigen manejar herramientas digitales, cuidar la información y colaborar en línea de forma segura.</li>
+            <li><strong>Aprendizaje continuo:</strong> la tecnología cambia rápido; desarrollar estas competencias es un proceso permanente, no un destino.</li>
+          </ul>
         </div>
 
         <div class="callout callout--info">
@@ -375,6 +428,40 @@ const COURSE = [
 
         <p style="margin-top:20px; color:var(--texto-suave);">Gracias por recorrer este ambiente de aprendizaje. 🛡️</p>
       </section>`
+  }
+];
+
+/* Detalle ampliado de las 5 áreas DigComp (Módulo 1) */
+const DIGCOMP_AREAS = [
+  {
+    icon: "🔎",
+    title: "1. Información y alfabetización de datos",
+    text: "Es la capacidad de buscar, filtrar, evaluar y organizar información digital, distinguiendo fuentes confiables de la desinformación (fake news).",
+    extra: "<strong>Ejemplo real:</strong> antes de compartir una noticia, verificas la fuente, la fecha y si otros medios serios la confirman.<br/><strong>Consejo:</strong> desconfía de titulares alarmistas y contrasta siempre con al menos dos fuentes."
+  },
+  {
+    icon: "💬",
+    title: "2. Comunicación y colaboración",
+    text: "Interactuar, compartir y colaborar con otras personas usando herramientas digitales, aplicando normas de respeto conocidas como netiqueta.",
+    extra: "<strong>Ejemplo real:</strong> trabajar un documento en equipo por Google Docs o coordinar tareas por correo con un tono respetuoso.<br/><strong>Consejo:</strong> cuida el tono, evita escribir en MAYÚSCULAS (equivale a gritar) y respeta la privacidad de los demás."
+  },
+  {
+    icon: "🎨",
+    title: "3. Creación de contenido digital",
+    text: "Producir y editar contenidos (textos, imágenes, videos, presentaciones) y conocer los derechos de autor y las licencias de uso.",
+    extra: "<strong>Ejemplo real:</strong> diseñar una infografía en Canva usando imágenes con licencia libre y citando tus fuentes.<br/><strong>Consejo:</strong> no uses cualquier imagen de internet; busca recursos de libre uso (Creative Commons)."
+  },
+  {
+    icon: "🛡️",
+    title: "4. Seguridad",
+    text: "Proteger tus dispositivos, tus datos personales, tu privacidad y tu bienestar digital frente a riesgos y amenazas. ¡Es el foco central de este curso!",
+    extra: "<strong>Ejemplo real:</strong> usar contraseñas robustas, activar la verificación en dos pasos y reconocer correos de phishing.<br/><strong>Consejo:</strong> mantén tus equipos actualizados y nunca compartas tus claves."
+  },
+  {
+    icon: "🧩",
+    title: "5. Resolución de problemas",
+    text: "Usar la tecnología para resolver necesidades reales, tomar decisiones informadas y seguir aprendiendo de forma autónoma.",
+    extra: "<strong>Ejemplo real:</strong> cuando una app falla, buscas la solución en tutoriales o foros y la aplicas por tu cuenta.<br/><strong>Consejo:</strong> no temas experimentar; equivocarse y buscar soluciones es parte del aprendizaje digital."
   }
 ];
 
